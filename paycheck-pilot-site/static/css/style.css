@@ -1,0 +1,121 @@
+/* The Paycheck Pilot — clean, trustworthy, fast. System fonts only, no webfonts. */
+:root {
+  --navy: #16233f;
+  --navy-deep: #0f1a30;
+  --ink: #1f2937;
+  --muted: #5b6472;
+  --accent: #0e7c5b;
+  --accent-dark: #0a5f46;
+  --paper: #ffffff;
+  --wash: #f4f7fa;
+  --line: #e3e8ef;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+  font-size: 1.0625rem;
+}
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; color: var(--navy); }
+h1 { font-size: 2.1rem; margin: 0 0 0.6em; }
+h2 { font-size: 1.5rem; margin-top: 1.8em; }
+a { color: var(--accent-dark); }
+a:hover { color: var(--accent); }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+.wrap.narrow { max-width: 720px; }
+.center { text-align: center; padding: 4rem 1.25rem; }
+
+/* Header */
+.site-header { background: var(--navy); color: #fff; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding-top: 0.9rem; padding-bottom: 0.9rem; }
+.brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: #fff; }
+.brand-mark { font-size: 1.6rem; }
+.brand-name { font-family: Georgia, serif; font-size: 1.35rem; font-weight: bold; }
+.site-nav a { color: #dbe3f0; text-decoration: none; margin-left: 1.4rem; font-size: 1rem; }
+.site-nav a:hover { color: #fff; text-decoration: underline; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%); color: #fff; padding: 4rem 0 3.5rem; }
+.hero h1 { color: #fff; font-size: 2.6rem; margin: 0.3em 0; max-width: 16em; }
+.kicker { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; color: #9fd8c2; margin: 0; }
+.lede { font-size: 1.2rem; color: #c9d4e6; max-width: 34em; }
+.hero .lede { color: #c9d4e6; }
+.btn {
+  display: inline-block; background: var(--accent); color: #fff !important;
+  padding: 0.75rem 1.5rem; border-radius: var(--radius); text-decoration: none; font-weight: 600;
+}
+.btn:hover { background: var(--accent-dark); }
+.btn.secondary { background: transparent; border: 2px solid var(--accent); color: var(--accent-dark) !important; margin-left: 0.5rem; }
+
+/* Cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 3rem; }
+.cards.stacked { grid-template-columns: 1fr; }
+.card { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; background: var(--paper); }
+.card h3, .card h2 { margin: 0 0 0.4em; font-size: 1.3rem; }
+.card h3 a, .card h2 a { color: var(--navy); text-decoration: none; }
+.card h3 a:hover, .card h2 a:hover { color: var(--accent-dark); text-decoration: underline; }
+.card-meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.6em; }
+.card p:last-child { margin-bottom: 0; }
+
+/* Split section */
+.split { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; margin-bottom: 4rem; }
+.start-list { padding-left: 1.2rem; }
+.start-list li { margin-bottom: 0.7em; font-size: 1.1rem; }
+
+/* Article */
+.article-head { margin: 2.5rem 0 1rem; }
+.prose { margin: 1.5rem 0; }
+.prose h2 { border-bottom: 2px solid var(--wash); padding-bottom: 0.3em; }
+.prose table { width: 100%; border-collapse: collapse; margin: 1.4em 0; font-size: 0.98rem; }
+.prose th, .prose td { border: 1px solid var(--line); padding: 0.6rem 0.8rem; text-align: left; }
+.prose th { background: var(--wash); color: var(--navy); }
+.prose blockquote { border-left: 4px solid var(--accent); margin: 1.4em 0; padding: 0.6em 1.2em; background: var(--wash); border-radius: 0 var(--radius) var(--radius) 0; }
+.prose blockquote p { margin: 0.4em 0; }
+.prose .example { background: #f0faf5; border: 1px solid #cdeadb; border-radius: var(--radius); padding: 1.2rem 1.4rem; margin: 1.6em 0; }
+.prose .example h3, .prose .example h4 { margin-top: 0; color: var(--accent-dark); }
+
+/* Disclosure */
+.disclosure-banner { background: #fff8e6; border: 1px solid #f0d98c; border-radius: var(--radius); padding: 0.9rem 1.2rem; margin: 1.5rem 0; font-size: 0.95rem; }
+.disclosure-banner p { margin: 0; }
+.disclosure-full { background: var(--wash); border-radius: var(--radius); padding: 1.2rem 1.4rem; margin: 2.5rem 0; font-size: 0.95rem; color: var(--muted); }
+.disclosure-full h2 { font-size: 1.15rem; margin-top: 0; }
+
+/* Author + related */
+.author-box { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem 1.4rem; margin: 2rem 0; }
+.author-box h2 { font-size: 1.15rem; margin-top: 0; }
+.related { margin: 2rem 0 4rem; }
+.related ul { padding-left: 1.2rem; }
+.related li { margin-bottom: 0.5em; }
+
+/* Footer */
+.site-footer { background: var(--navy-deep); color: #b9c4d8; margin-top: 3rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: 2rem; padding-top: 2.2rem; padding-bottom: 1.5rem; flex-wrap: wrap; }
+.footer-brand p { margin: 0.3em 0; }
+.footer-brand strong { color: #fff; font-family: Georgia, serif; font-size: 1.15rem; }
+.footer-nav a { color: #b9c4d8; text-decoration: none; margin-right: 1.2rem; font-size: 0.95rem; }
+.footer-nav a:hover { color: #fff; text-decoration: underline; }
+.footer-legal { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1rem; padding-bottom: 1.5rem; font-size: 0.85rem; }
+
+/* Forms */
+.contact-form label { display: block; margin: 1em 0 0.3em; font-weight: 600; }
+.contact-form input, .contact-form textarea {
+  width: 100%; padding: 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 1rem; font-family: inherit;
+}
+.contact-form button { margin-top: 1.2em; cursor: pointer; border: none; font-size: 1rem; }
+
+@media (max-width: 720px) {
+  body { font-size: 1rem; }
+  .hero { padding: 2.8rem 0 2.4rem; }
+  .hero h1 { font-size: 2rem; }
+  h1 { font-size: 1.7rem; }
+  .split { grid-template-columns: 1fr; gap: 1rem; }
+  .site-nav a { margin-left: 0.9rem; }
+  .prose table { font-size: 0.88rem; }
+}

@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article class="wrap narrow">
+  <header class="article-head">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    <p class="card-meta">By {{ site.Params.author }} · {{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</p>
+  </header>
+
+  {{ partial "disclosure-banner.html" . }}
+
+  <div class="prose">
+    {{ .Content }}
+  </div>
+
+  <aside class="disclosure-full" aria-label="Full affiliate disclosure">
+    <h2>Affiliate disclosure</h2>
+    <p>The Paycheck Pilot is reader-supported. Some links on this page are affiliate links, which means we may earn a commission if you sign up or make a purchase through them — at no additional cost to you. We only link to products and services in categories we genuinely cover, and commissions never influence what we write. Thanks for keeping the guides free. You can read our <a href="{{ "/disclosure/" | relURL }}">full affiliate disclosure</a> and <a href="{{ "/privacy/" | relURL }}">privacy policy</a> anytime.</p>
+  </aside>
+
+  <aside class="author-box">
+    <h2>About the author</h2>
+    <p><strong>Robert</strong> is an hourly worker paid biweekly who built his own bill-earmarking system across multiple bank accounts after one too many "where did it all go?" months. He writes The Paycheck Pilot from lived experience — every method here is one he's actually used.</p>
+    <p><a href="{{ "/about/" | relURL }}">More about Robert →</a></p>
+  </aside>
+
+  {{ $related := where (where site.RegularPages "Section" "articles") "RelPermalink" "!=" .RelPermalink | first 3 }}
+  {{ with $related }}
+  <aside class="related">
+    <h2>Keep reading</h2>
+    <ul>
+      {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+    </ul>
+  </aside>
+  {{ end }}
+</article>
+{{ end }}

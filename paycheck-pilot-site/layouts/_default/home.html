@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Money guides for hourly &amp; biweekly workers</p>
+    <h1>Make every paycheck cover what it needs to.</h1>
+    <p class="lede">No jargon, no judgment, no "just stop buying lattes." Practical systems for budgeting on irregular pay — written by someone who lives it.</p>
+    <p><a class="btn" href="{{ "/articles/how-to-budget-a-biweekly-paycheck/" | relURL }}">Start with the flagship guide</a></p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Latest articles</h2>
+  <div class="cards">
+    {{ range first 6 (where site.RegularPages "Section" "articles") }}
+    <article class="card">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p class="card-meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read</p>
+      <p>{{ .Description }}</p>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="wrap split">
+  <div>
+    <h2>Built for how you actually get paid</h2>
+    <p>Most budgeting advice assumes a steady monthly salary. If you're paid by the hour, paid weekly, or paid every two weeks, that advice breaks on contact with reality. The Paycheck Pilot covers the stuff that actually matters: splitting bills across paychecks, surviving the "wrong check" problem, and putting third paychecks to work.</p>
+    <p><a href="{{ "/about/" | relURL }}">Meet the author →</a></p>
+  </div>
+  <div>
+    <h2>Start here</h2>
+    <ol class="start-list">
+      <li><a href="{{ "/articles/how-to-budget-a-biweekly-paycheck/" | relURL }}">How to Budget a Biweekly Paycheck</a></li>
+      <li><a href="{{ "/articles/how-to-split-monthly-bills-between-two-biweekly-paychecks/" | relURL }}">How to Split Monthly Bills Between Two Biweekly Paychecks</a></li>
+      <li><a href="{{ "/articles/what-to-do-with-the-third-paycheck/" | relURL }}">What to Do With the Third Paycheck</a></li>
+    </ol>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html" . }}
+  <title>Page not found | {{ site.Title }}</title>
+</head>
+<body>
+  {{ partial "header.html" . }}
+  <main id="content">
+    <div class="wrap narrow center">
+      <h1>404 — That page doesn't exist.</h1>
+      <p class="lede">The link you followed is broken, or the page moved. Here are some useful places instead:</p>
+      <p>
+        <a class="btn" href="{{ "/" | relURL }}">Back to home</a>
+        <a class="btn secondary" href="{{ "/articles/" | relURL }}">Browse articles</a>
+      </p>
+    </div>
+  </main>
+  {{ partial "footer.html" . }}
+</body>
+</html>

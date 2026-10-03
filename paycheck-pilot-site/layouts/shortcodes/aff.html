@@ -1,0 +1,7 @@
+{{- /* Affiliate link shortcode.
+     Usage: {{< aff "ynab" "YNAB" >}}  or  {{< aff "ynab" >}}
+     Key must exist in data/affiliates.yaml. Renders rel="sponsored nofollow". */ -}}
+{{- $key := .Get 0 -}}
+{{- $text := .Get 1 | default $key -}}
+{{- $url := index site.Data.affiliates $key | default "#" -}}
+<a href="{{ $url }}" class="aff-link" rel="sponsored nofollow noopener"{{ if ne $url "#" }} target="_blank"{{ end }}>{{ $text }}</a>
