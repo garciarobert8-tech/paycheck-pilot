@@ -23,6 +23,10 @@ description: "How The Paycheck Pilot makes money: affiliate relationships, clear
 
 This page exists because the Federal Trade Commission requires clear disclosure of material connections between publishers and advertisers. In addition to this page, every article on The Paycheck Pilot carries a disclosure notice at the top and a full disclosure statement at the bottom — so you never have to hunt for it.
 
+### Amazon Associates
+
+As an Amazon Associate, The Paycheck Pilot earns from qualifying purchases made through Amazon links on this site.
+
 ### Questions?
 
 If you ever wonder whether a specific link is an affiliate link, assume it might be — or just [ask us](/contact/). We'll tell you straight.
