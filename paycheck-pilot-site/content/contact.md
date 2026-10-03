@@ -7,7 +7,7 @@ description: "Get in touch with The Paycheck Pilot."
 
 Questions about a guide, a topic you want covered, or a correction? Send a note — every message gets read.
 
-<form class="contact-form" action="https://formspree.io/f/https://formspree.io/f/mkjgdydl" method="POST">
+<form class="contact-form" action="https://formspree.io/f/mkjgdydl" method="POST">
   <label for="name">Name</label>
   <input id="name" type="text" name="name" required autocomplete="name">
 
