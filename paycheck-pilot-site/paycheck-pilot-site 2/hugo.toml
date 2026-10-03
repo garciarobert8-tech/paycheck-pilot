@@ -1,0 +1,17 @@
+baseURL = "https://thepaycheckpilot.com/"
+title = "The Paycheck Pilot"
+languageCode = "en-us"
+
+[params]
+  description = "Practical money guides for hourly and biweekly workers. Budgeting on irregular pay, bill-splitting systems, and making every paycheck cover what it needs to."
+  author = "Robert"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

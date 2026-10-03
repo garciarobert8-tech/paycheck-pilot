@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="wrap narrow">
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+  <div class="cards stacked">
+    {{ range .Pages.ByDate.Reverse }}
+    <article class="card">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p class="card-meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read</p>
+      <p>{{ .Description }}</p>
+    </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

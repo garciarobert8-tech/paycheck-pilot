@@ -1,0 +1,23 @@
+# Affiliate link registry for The Paycheck Pilot.
+#
+# HOW IT WORKS:
+# - In articles, link with the shortcode:  {{< aff "ynab" "YNAB" >}}
+#   (first arg = key below, second arg = link text)
+# - Every link renders with rel="sponsored nofollow noopener" automatically.
+# - When an affiliate program approves the site, replace the "#" value
+#   with the real tracking URL. One file to update, whole site follows.
+#
+# Until then, all values stay "#" so no broken or misleading links ship.
+
+ynab: "#"
+rocket-money: "#"
+monarch-money: "#"
+sofi: "#"
+discover: "#"
+amazon: "#"
+flexoffers: "#"
+
+# Amazon product links (tracking ID: thepaycheckpi-20). Product-specific so each
+# article can link the item that fits. Verified ASINs, 2026-10-02.
+amazon-planner: "https://www.amazon.com/dp/B08LFWQQ8Z?tag=thepaycheckpi-20"
+amazon-money-makeover: "https://www.amazon.com/dp/140034252X?tag=thepaycheckpi-20"
