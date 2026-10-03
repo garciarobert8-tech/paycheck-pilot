@@ -37,6 +37,8 @@ Write each one with its amount and due date:
 
 Two checks at $1,850 = **$3,700/month** in income against **$2,205** in bills. That leaves $1,495 for groceries, gas, and everything else — plus savings, if we do this right. But only if the timing works. Which brings us to the part that actually matters.
 
+If you prefer paper over a spreadsheet for tracking all this, a {{< aff "amazon-planner" "biweekly budget planner" >}} gives you bill trackers and expense pages in this exact format — worth it if writing things down is what keeps you honest.
+
 ## Step 3: The half-per-check method
 
 Here's the core of the whole system: **take your biggest bills and split them in half, setting aside half from each paycheck.**

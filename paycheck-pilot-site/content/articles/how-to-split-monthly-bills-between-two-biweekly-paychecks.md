@@ -37,6 +37,8 @@ Notice the car insurance problem: it's due on the 12th but the "correct" check d
 
 Pick one and update the table. The table is the system — when it's right, the month runs itself.
 
+If you want this table on paper instead of a spreadsheet, a {{< aff "amazon-planner" "budget planner with bill trackers" >}} maps well onto the Check A / Check B layout.
+
 ## Step 2: Balance the two checks
 
 Now look at the totals. Check A carries $270 in assigned bills; Check B carries $235. That's nicely balanced — each check gives up roughly the same amount to bills, which means your spending money is roughly equal in week 1–2 and week 3–4.

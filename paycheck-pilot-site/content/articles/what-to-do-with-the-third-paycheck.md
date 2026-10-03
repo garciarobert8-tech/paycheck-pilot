@@ -32,6 +32,8 @@ Keep it in a separate savings account, not your checking. If you can see it next
 
 Your regular budget already pays the minimums. The third check attacks the *principal* on whatever charges the highest interest rate — usually a credit card. This is the highest-return move available to most people, because every dollar of 24% debt you kill is a dollar that stops costing you 24 cents a year.
 
+The most famous version of this attack is the debt snowball from {{< aff "amazon-money-makeover" "The Total Money Makeover" >}} — worth reading if you want the full psychology behind why paying smallest-balance-first keeps people going when the math says otherwise.
+
 <div class="example">
 
 ### Worked example: a $1,850 third check
