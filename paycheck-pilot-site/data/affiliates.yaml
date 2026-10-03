@@ -16,3 +16,8 @@ sofi: "#"
 discover: "#"
 amazon: "#"
 flexoffers: "#"
+
+# Amazon product links (tracking ID: thepaycheckpi-20). Product-specific so each
+# article can link the item that fits. Verified ASINs, 2026-10-02.
+amazon-planner: "https://www.amazon.com/dp/B08LFWQQ8Z?tag=thepaycheckpi-20"
+amazon-money-makeover: "https://www.amazon.com/dp/140034252X?tag=thepaycheckpi-20"
