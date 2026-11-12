@@ -15,9 +15,18 @@
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:url" content="{{ $url }}">
+<meta property="og:image" content="{{ "images/og-image.jpg" | absURL }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Paycheck Pilot — Practical money guides for hourly and biweekly workers.">
 <!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ "images/og-image.jpg" | absURL }}">
+{{- if and .IsPage (eq .Section "articles") }}
+{{- $schema := dict "@context" "https://schema.org" "@type" "Article" "headline" .Title "description" $desc "image" ("images/og-image.jpg" | absURL) "author" (dict "@type" "Person" "name" site.Params.author) "publisher" (dict "@type" "Organization" "name" site.Title "logo" (dict "@type" "ImageObject" "url" ("images/og-image.jpg" | absURL))) "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00") "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00") "mainEntityOfPage" (dict "@type" "WebPage" "@id" $url) }}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{- end }}
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💵</text></svg>">
